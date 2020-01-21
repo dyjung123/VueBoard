@@ -1,22 +1,20 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
+import QnaBoardView from '../views/board/QnaBoardView.vue';
+import WriteBoardView from '../views/board/WriteBoardView.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: Home,
+    path: '/board/qna',
+    name: 'QnaBoardView',
+    component: QnaBoardView,
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    path: '/board/write',
+    name: 'WriteBoardView',
+    component: WriteBoardView,
   },
 ];
 
