@@ -89,6 +89,26 @@
 
   @Component
   export default class WriteBoardView extends Vue {
+
+    private title: string = '';
+
+    private content: string = '';
+
+    private category: string = '';
+
+    private errorMsg: string = '';
+
+    private unauthorized: string = '';
+
+    private loading: boolean = false;
+
+    async mounted() {
+      this.loading = true;
+      // TODO: Load Categories
+      // TODO: if topicId exist -> load current topic -> check auth (is login, can edit)
+      // TODO: Assign loaded titles, content, and cartridges to data (this.title, this.content, this.category).
+      this.loading = false;
+    }
   }
 </script>
 
